@@ -1,0 +1,48 @@
+# Anaconda and Tensorflow
+
+* Download Anaconda
+
+Download from website or source, here are two source:
+
+	1). https://repo.continuum.io/archive/index.html
+	2). https://mirrors.tuna.tsinghua.edu.cn/anaconda/
+
+* Install Anaconda
+
+```bash
+sudo sh Anaconda3-4.3.1-Linux-x86_64.sh
+```
+
+* Add to path
+
+```bash
+export PATH=/home/user/anaconda3/bin:$PATH 
+```
+
+* Change the packages source
+
+```bash
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/	# use tsinghua source
+conda config --set show_channel_urls yes
+conda config --remove channels defaults            			# not use default source
+```
+
+* Download tensorflow package
+
+Download from github: https://github.com/tensorflow/tensorflow
+
+* Install tensorflow
+
+```bash
+conda info -e          			# list current env in anaconda
+
+conda create -n tensorflow python=2.7
+source activate tensorflow         # ∆Ù”√
+source deactivate tensorflow       # ≤ª∆Ù”√
+pip install --index https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/ ./tensorflow-1.0.1-cp27-none-linux_x86_64.whl
+```
+
+reference:
+http://www.cnblogs.com/v5captain/p/6414177.html
+http://blog.csdn.net/u010858605/article/details/64128466
+http://cs2.swfc.edu.cn/~zyl/?p=2537
