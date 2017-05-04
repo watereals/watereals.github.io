@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Anaconda
+title: Ubuntu Soft Install
 ---
 
 # Install Software

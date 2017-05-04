@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Anaconda
+title: 梯度提升决策树(GBDT)
 ---
 
 # 梯度提升算法
