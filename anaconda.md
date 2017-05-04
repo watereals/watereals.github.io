@@ -37,8 +37,8 @@ Download from github: https://github.com/tensorflow/tensorflow
 conda info -e          			# list current env in anaconda
 
 conda create -n tensorflow python=2.7
-source activate tensorflow         # ∆Ù”√
-source deactivate tensorflow       # ≤ª∆Ù”√
+source activate tensorflow         # enable tensorflow
+source deactivate tensorflow       # disable tensorflow
 pip install --index https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/ ./tensorflow-1.0.1-cp27-none-linux_x86_64.whl
 ```
 
