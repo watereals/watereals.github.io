@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 梯度提升决策树(GBDT)
+mathjax: true
 ---
 
 # 梯度提升算法
