@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 梯度提升决策树(GBDT)
 mathjax: true
 ---
