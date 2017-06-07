@@ -6,7 +6,12 @@ mathjax: true
 
 # Sampling from a discrete distribution
 
+GitHub: [sampling-method](https://github.com/watereals/learning/tree/master/sampling-method)
+参考这篇文章[这篇文章](http://www.keithschwarz.com/darts-dice-coins/)
+
 ## 一般算法
+
+时间复杂度 O(M * log(N)), 空间复杂度 O(2 * N)
 
 Algorithm: Simulating a Loaded Die with a Fair Die
 
@@ -24,6 +29,8 @@ Generation:
 
 ## 累积法
 
+时间复杂度 O(M * log(N)), 空间复杂度 O(2 * N)
+
 Algorithm: Roulette Wheel Selection
 
 Initialization:
@@ -38,6 +45,26 @@ Generation:
 1. Generate a uniformly-random value $x$ in the range $[0,1)$
 2. Using a binary search, find the index $i$ of the smallest element in $A$ larger than $x$.
 3. Return $i$.
+
+## 剩余法
+
+与累积法对应，剩余法应运而生。
+
+时间复杂度 O(M * N), 空间复杂度 O(N)
+
+Algorithm: Loaded Die from Biased Coins
+
+Initialization:
+
+1. Store the probabilities $p_i$ for later use.
+
+Generation:
+
+1. Set $mass=1$
+2. For $i=0$ to $n−1$:
+    + 2.1 Flip a biased coin with probability $p_i / mass$ of coming up heads.
+    + 2.2 If it comes up heads, return $i$.
+    + 2.3 Otherwise, set $mass=mass−p_i$
 
 ## Alias Method
 
